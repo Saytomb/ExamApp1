@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp3.InfoWIndow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Icon="Assets/Мастер пол.png"
+
+    Title="Сведения" Height="500" Width="700" Background="White">
+ 
+
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Сведения о продукции" FontSize="20" FontWeight="Bold" Margin="0,10" FontFamily="Segoe UI"/>
+            <DataGrid x:Name="ProductsGrid" Height="150" AutoGenerateColumns="True" CanUserAddRows="False" 
+                      HorizontalAlignment="Left" Width="650" Margin="0,5"/>
+
+            <TextBlock Text="Ваши заявки" FontSize="20" FontWeight="Bold" Margin="0,10" FontFamily="Segoe UI"/>
+            <DataGrid x:Name="OrdersGrid" Height="150" AutoGenerateColumns="True" CanUserAddRows="False" 
+                      HorizontalAlignment="Left" Width="650" Margin="0,5" SelectionMode="Single"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                <Button Content="Удалить заявку" Width="120" Click="DeleteOrder_Click" 
+                        Background="#D9534F" Foreground="White" Margin="5"/>
+                <Button Content="Назад" Width="100" Click="BackButton_Click" 
+                        Background="#D9534F" Foreground="White" Margin="5"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
